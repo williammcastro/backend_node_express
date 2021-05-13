@@ -8,7 +8,7 @@ const express = require('express');
 const path = require('path');
 require('dotenv').config();
 
-//App de Express:
+//App de Express::
 const app = express();
 
 //Node Server - creacion del servidor de sockets node
