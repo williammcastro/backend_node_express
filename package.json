@@ -1,7 +1,6 @@
 {
   "name": "01-band_names_server",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,5 +14,14 @@
     "dotenv": "^9.0.2",
     "express": "^4.17.1",
     "socket.io": "^4.1.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williammcastro/backend_node_express.git"
+  },
+  "bugs": {
+    "url": "https://github.com/williammcastro/backend_node_express/issues"
+  },
+  "homepage": "https://github.com/williammcastro/backend_node_express#readme",
+  "description": ""
 }

@@ -1,8 +1,8 @@
 //para correr el server: node index.js o node index
 //para detener el server: Ctrl C
 //para correr el server con nodemon: nodemon index
-//con nodemon baja y sube el servidor node cuando hago cambios en los archivos como este.
-//para correrlo con el start de acuerdo a lo q coloque en packages.json es: npm run start:dev o: npm start
+//nodemon baja y sube el servidor node cuando hago cambios en los archivos como este automaticamente
+//para correr el server con start de acuerdo packages.json es: npm run start:dev o: npm start
 
 const express = require('express');
 const path = require('path');
