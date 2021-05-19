@@ -20,4 +20,12 @@ io.on('connection', client => {
         io.emit('mensajeclaverespuestaatodos', {admin: 'nuevo mensaje para todos desde el backend index.js'});
      });
 
+     client.on('nuevo-mensaje', ( payload ) => {
+        console.log('recibido nuevo-mensaje...payload : ', payload)//emite a todos
+        //io.emit('morral', payload);//emite a todos
+        //client.broadcast.emit('morral', payload);//emite a todos menos al que lo emitio
+        client.broadcast.emit('emitir-mensaje', payload);
+
+     })
+
 });

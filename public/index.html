@@ -28,7 +28,7 @@
         socket.emit('mensajeclave', { nombre: 'William' });
 
         //la siguiente linea esta escuchando un mensaje llamado mensajeclaverespuestaatodos y tiene un objeto  payload recibido que luego en la funcion se hace el console.log 
-        socket.on('mensajeclaverespuestaatodos', function(payloaddevuelta){
+        socket.on('emitir-mensaje', function(payloaddevuelta){
             console.log('Escuchando el payload de vuelta : ', payloaddevuelta )
         });
 
