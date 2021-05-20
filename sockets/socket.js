@@ -14,10 +14,17 @@ bands.addBand( new Band('Metallica') );
 
 
 //Mensajes de sockets:
-io.on('connection', client => {
+io.on('connection', client => {//Escucha conexiones de los clientes y lo q sigue abajo lo ejecuta cuando alguien se conecta
     console.log('Cliente conectado en el backend index.js');
 
     client.emit('active-bands', bands.getBands() );
+
+     //la siguiente linea esta escuchando el mensaje de votos de la banda, es decir desde flutter 'vote-band'
+     client.on('vote-band', ( payload ) => {
+      console.log('Escuchando el voto de la banda : ', payload );
+      bands.voteBand( payload.id );
+      io.emit('active-bands', bands.getBands() ); //Emito a todos los conectados al server con io, en vez de client o socket.
+  });
     
     client.on('disconnect', () => { 
         console.log('Cliente desconectado en el backend index.js');
