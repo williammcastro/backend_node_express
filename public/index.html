@@ -25,7 +25,7 @@
         });
 
         //la siguiente linea emite un mensaje lamado mensajeclave que el receptor va a estar escuchando, este tiene un objeto como payload que envia como parametro al receptor
-        socket.emit('mensajeclave', { nombre: 'Bienvenido nuevo usuario' });
+        socket.emit('mensajeclave', { nombre: 'Nuevo usuario WEB conectado' });
         
 
         //la siguiente linea esta escuchando un mensaje llamado mensajeclaverespuestaatodos y tiene un objeto  payload recibido que luego en la funcion se hace el console.log 
